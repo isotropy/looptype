@@ -1,0 +1,5 @@
+{
+  "sourceMaps": true,
+  "presets": ["react"],
+  "plugins": ["transform-async-to-generator"]
+}

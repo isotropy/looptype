@@ -1,0 +1,51 @@
+/* v Home v  */
+
+.homeContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* ^ Home ^  */
+
+/* v Banner v */
+
+.bannerContainer {
+  color: white;
+  background-color: #009900;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.bannerCenterContainer {
+  width: 10%;
+  flex: 9;
+}
+
+.bannerRightContainter {
+  flex: 1;
+  align-self: center;
+  align-items: flex-end;
+}
+
+.bannerTitle {
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.bannerLogin {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.bannerMainText {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.bannerSubText {
+  font-size: 10px;
+}
+
+/* ^ Banner ^ */
