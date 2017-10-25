@@ -6,3 +6,9 @@ export async function getLoopList() {
 
   updateState("loops", state => loops);
 }
+
+export async function getLoop(loopId) {
+  const loop = await readLoopsAPI.getLoop(loopId);
+
+  updateState("loops", state => loop);
+}

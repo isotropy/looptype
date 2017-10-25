@@ -6,7 +6,7 @@ import LoopList from "./loop-list";
 const Home = () =>
   <div>
     <Banner />
-    <div>
+    <div style={{textAlign:"center"}}>
       <div>
         "Install an app. It's free."
       </div>

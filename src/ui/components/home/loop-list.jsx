@@ -8,28 +8,32 @@ class LoopList extends Component {
   }
   render() {
     return this.props.loops
-      ? <div>
+      ? <div className="loopsContainer">
           {this.props.loops.map(loop =>
-            <div>
-              <div>
-                <div>
-                  Icon
-                </div>
-                <div>
+            <div className="loop">
+              <a
+                href={`/loops/${loop.id}`}
+                style={{ textDecoration: "none", color: "black" }}>
+                <div id={`loop_${loop.id}`}>
                   <div>
-                    {loop.title}
+                    Icon
                   </div>
                   <div>
-                    by {loop.author}
+                    <div>
+                      {loop.title}
+                    </div>
+                    <div>
+                      by {loop.author}
+                    </div>
+                  </div>
+                  <div>
+                    {loop.description}
+                  </div>
+                  <div>
+                    Icon {loop.installs}
                   </div>
                 </div>
-                <div>
-                  {loop.description}
-                </div>
-                <div>
-                  Icon {loop.installs}
-                </div>
-              </div>
+              </a>
             </div>
           )}
         </div>

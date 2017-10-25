@@ -49,3 +49,22 @@
 }
 
 /* ^ Banner ^ */
+
+/* v Loops v */
+
+.loopsContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loop {
+  padding: 30px;
+  margin: 15px;
+  border: 1px solid;
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+/* ^ Loops ^ */
