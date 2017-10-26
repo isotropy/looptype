@@ -1,21 +1,31 @@
 import React, { Component } from "react";
-
+import { connect } from "redux-jetpack";
 import Banner from "./banner";
-import LoopList from "./loop-list";
+import LoopList from "../loops/list";
+import * as readLoops from "../../actions/read-loops";
 
-const Home = () =>
-  <div>
-    <Banner />
-    <div style={{textAlign:"center"}}>
-      <div>
-        "Install an app. It's free."
-      </div>
-      <div>
-        Know JavaScript?
-        Create an app
-      </div>
-    </div>
-    <LoopList />
-  </div>;
+class Home extends Component {
+  componentWillMount() {
+    readLoops.getPopularLoops();
+  }
 
-export default Home;
+  render() {
+    return (
+      <div>
+        <Banner />
+        <div style={{ textAlign: "center" }}>
+          <div>
+            "Install an app. It's free."
+          </div>
+          <div>
+            Know JavaScript?
+            Create an app
+          </div>
+        </div>
+        {this.props.loops ? <LoopList loopList={this.props.loops} /> : null}
+      </div>
+    );
+  }
+}
+
+export default connect(Home, state => state);
