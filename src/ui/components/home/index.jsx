@@ -4,6 +4,8 @@ import Banner from "./banner";
 import LoopList from "../loops/list";
 import * as readLoops from "../../actions/read-loops";
 
+const IDE_ROOT = 'https://edit.looptype.com/s/';
+
 class Home extends Component {
   componentWillMount() {
     readLoops.getPopularLoops();
@@ -19,7 +21,11 @@ class Home extends Component {
           </div>
           <div>
             Know JavaScript?
-            Create an app
+          </div>
+          <div>
+            <a href={`${IDE_ROOT}new`} style={{width: "100px", height: "45px", color: "green"}}>
+              <h2>Create an App</h2>
+            </a>
           </div>
         </div>
         {this.props.loops ? <LoopList loopList={this.props.loops} /> : null}

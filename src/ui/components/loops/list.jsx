@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
+const IDE_ROOT = 'https://edit.looptype.com/s/';
+
 const LoopList = ({ loopList }) =>
   <div className="loopsContainer">
     {loopList.map(loop =>
       <div className="loop" key={`loop_${loop.id}`}>
         <a
-          href={`/loops/${loop.id}`}
+          href={`${IDE_ROOT}${loop.id}`}
           style={{ textDecoration: "none", color: "black" }}>
           <div>
             <div>
