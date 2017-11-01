@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "redux-jetpack";
 import Banner from "./banner";
+import Modal from "./modal";
+import SignIn from "./signIn";
 import LoopList from "../loops/list";
 import * as readLoops from "../../actions/read-loops";
+import * as modal from "../../actions/modal";
 
 const IDE_ROOT = 'https://edit.looptype.com/s/';
 
@@ -12,9 +15,13 @@ class Home extends Component {
   }
 
   render() {
+    const { isModalOpen } = this.props;
     return (
       <div>
         <Banner />
+        { isModalOpen && 
+          <Modal><SignIn /></Modal> 
+        }
         <div style={{ textAlign: "center" }}>
           <div>
             "Install an app. It's free."

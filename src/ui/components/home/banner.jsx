@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "redux-jetpack";
+import SignInButton from "./signInButton";
 import * as readLoops from "../../actions/read-loops";
 
 const Banner = () =>
@@ -19,7 +20,7 @@ const Banner = () =>
       </div>
     </div>
     <div className="bannerRightContainter">
-      <span className="bannerLogin">LOGIN</span>
+      <SignInButton />
     </div>
   </div>;
 
